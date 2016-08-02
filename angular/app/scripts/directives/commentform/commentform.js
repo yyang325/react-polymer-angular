@@ -19,6 +19,7 @@ angular.module('commentForm', [])
         scope.comment = {};
         scope.submitComment = function(){
           var comment = scope.comment;
+          comment.updateTime = (new Date()).getTime();
           if (!comment.msg || !comment.author) {
             return;
           }
